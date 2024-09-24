@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Capturing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="text-center flex flex-col justify-center items-center">
+    <h1 class="text-4xl text-red-400 mt-4">Photo Capturing</h1>
+    
+    <!-- video and canvas container -->
+    <div class="flex justify-center space-x-8 mt-8">
+      <video
+        id="video"
+        width="600"
+        height="300"
+        class="bg-black transform scale-x-[-1] "
+      >
+        Stream not available
+      </video>
+
+      <canvas id="canvas" width="600" height="280" class="border border-gray-300"</canvas>
+    </div>
+
+    <!-- error box container -->
+    <div
+      id="error"
+      class="text-red-400 bg-[rgb(236 157 157)] mt-4 hidden"
+    ></div>
+
+    <!-- button container -->
+    <div id="button-container" class="space-x-4 mt-8">
+      <button
+        onclick="openCamera()"
+        class="border-2 px-4 p-2 rounded-md font-bold text-red-400"
+      >
+        Open Camera
+      </button>
+
+      <button
+        onclick="clickPhoto()"
+        class="border-2 px-4 p-2 rounded-md font-bold text-red-400"
+      >
+        Click Photo
+      </button>
+    </div>
+
+  </body>
+</html>
+<script src="./js/script.js"></script>
